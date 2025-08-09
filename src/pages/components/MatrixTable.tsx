@@ -15,7 +15,6 @@ interface Props {
 }
 
 export default function MatrixTable({ title, matrix = [] }: Props) {
-  // More thorough validation
   const isValidMatrix = Array.isArray(matrix) && 
                        matrix.length > 0 && 
                        matrix.every(row => Array.isArray(row));

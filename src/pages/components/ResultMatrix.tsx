@@ -1,11 +1,10 @@
 import { Typography, Table, TableBody, TableCell, TableRow, Paper } from "@mui/material";
 
 interface Props {
-  matrix?: number[][]; // Make the prop optional
+  matrix?: number[][];
 }
 
 export default function ResultMatrix({ matrix = [] }: Props) {
-  // Validate the matrix structure
   const isValidMatrix = Array.isArray(matrix) && 
                       matrix.every(row => Array.isArray(row));
 
